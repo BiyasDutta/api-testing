@@ -1,0 +1,157 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Biyas",
+      "skill": [
+        "painting",
+        "dancing"
+      ],
+      "batch": "2024"
+    },
+    {
+      "id": "2",
+      "name": "Moinak",
+      "skill": [
+        "painting",
+        "Guitar"
+      ],
+      "batch": "2000"
+    },
+    {
+      "id": "3",
+      "name": "Ram",
+      "skill": [
+        "painting",
+        "Driving"
+      ],
+      "batch": "1995"
+    },
+    {
+      "id": "4",
+      "name": "Geeta",
+      "skill": [
+        "Teaching",
+        "Guitar"
+      ],
+      "batch": "1997"
+    },
+    {
+      "id": "5",
+      "name": "Rita",
+      "skill": [
+        "Teaching",
+        "Singing"
+      ],
+      "batch": "2017"
+    },
+    {
+      "id": 6,
+      "name": "Shyam",
+      "skill": [
+        "Teaching",
+        "Writing"
+      ],
+      "batch": "2004"
+    },
+    {
+      "id": "7",
+      "name": "Ankan",
+      "skill": [
+        "Teaching",
+        "Writing"
+      ],
+      "batch": "2007"
+    },
+    {
+      "id": "8",
+      "name": "Ram",
+      "skill": [
+        "Assistant",
+        "Driving"
+      ],
+      "batch": "1999"
+    },
+    {
+      "id": "9",
+      "name": "Jodu",
+      "skill": [
+        "Gardening",
+        "Driving"
+      ],
+      "batch": "1989"
+    },
+    {
+      "id": "10",
+      "name": "Senti",
+      "skill": [
+        "Assistant",
+        "Sleeping"
+      ],
+      "batch": "2008"
+    },
+    {
+      "id": "11",
+      "name": "Ram",
+      "skill": [
+        "Assistant",
+        "Driving"
+      ],
+      "batch": "1999"
+    },
+    {
+      "id": "12",
+      "name": "Jogu",
+      "skill": [
+        "Cooking",
+        "Driving"
+      ],
+      "batch": "1994"
+    },
+    {
+      "id": "12",
+      "name": "Ping",
+      "skill": [
+        "Cooking",
+        "Singing"
+      ],
+      "batch": "1963"
+    },
+    {
+      "id": "13",
+      "name": "Wilma",
+      "skill": [
+        "Cooking",
+        "Swimming"
+      ],
+      "batch": "2008"
+    },
+    {
+      "id": "14",
+      "name": "Dirk",
+      "skill": [
+        "Guitar",
+        "Gardening"
+      ],
+      "batch": "1999"
+    },
+    {
+      "id": "15",
+      "name": "Luci",
+      "skill": [
+        "Writing",
+        "Teaching"
+      ],
+      "batch": "1955"
+    },
+    {
+      "id": "16",
+      "name": "Karyl",
+      "skill": [
+        "Lawyer",
+        "Writing"
+      ],
+      "batch": "2000"
+    }
+  ]
+}
