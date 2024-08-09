@@ -1,6 +1,5 @@
 package Common;
 
-import Utilities.POJO;
 import com.github.javafaker.Faker;
 import org.json.JSONObject;
 import java.io.FileNotFoundException;

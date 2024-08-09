@@ -143,15 +143,6 @@
         "Teaching"
       ],
       "batch": "1955"
-    },
-    {
-      "id": "16",
-      "name": "Karyl",
-      "skill": [
-        "Lawyer",
-        "Writing"
-      ],
-      "batch": "2000"
     }
   ]
 }

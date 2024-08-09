@@ -1,11 +1,11 @@
 package HTTPRequests;
 
 import Common.SetData;
-import Utilities.POJO;
+import Common.POJO;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
-import java.util.HashMap;
+
 import static io.restassured.RestAssured.given;
 
 public class PutRequest {
