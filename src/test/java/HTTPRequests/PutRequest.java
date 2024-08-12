@@ -1,36 +1,31 @@
 package HTTPRequests;
 
-import Common.SetData;
-import Common.POJO;
-import org.testng.annotations.Test;
-
-import java.io.FileNotFoundException;
+import common.Config;
+import common.POJO;
+import common.SetData;
 
 import static io.restassured.RestAssured.given;
 
 public class PutRequest {
     private static SetData setData;
     private static POJO data;
-    String lastId;
 
-    PutRequest(){
+    public PutRequest() {
         setData = new SetData();
         data = new POJO();
     }
 
-    @Test
-    void updateUser() throws FileNotFoundException {
-
+    public void updateUser() {
         given().contentType("application/json").body(createData())
 
-                .when().put("http://localhost:3000/students/" + setData.lastID())
+                .when().put("http://localhost:8080/api/students/" + Config.getID())
 
-                .then().statusCode(200).log().all();
+                .then().statusCode(201).log().all();
         System.out.println("Updated");
 
     }
 
-    POJO createData() throws FileNotFoundException {
+    POJO createData() {
         data.setName(setData.randomName());
         data.setSkill(setData.randomSkill());
         data.setBatch(setData.randomYear());

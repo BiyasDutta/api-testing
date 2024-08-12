@@ -1,52 +1,43 @@
-package Common;
+package common;
 
 import com.github.javafaker.Faker;
-import org.json.JSONObject;
-import java.io.FileNotFoundException;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
 public class SetData {
-    private static ReadJSON readjson;
     private static POJO pojo;
     private static Random random;
 
     public SetData() {
-        readjson = new ReadJSON();
         pojo = new POJO();
         random = new Random();
     }
 
-    public POJO setRandomData() throws FileNotFoundException {
+    public POJO setRandomData() {
         POJO data = new POJO();
         data.setName(randomName());
         data.setSkill(randomSkill());
-        data.setId(String.valueOf(Integer.parseInt(lastID())+1));
+        data.setId(Config.getID());
         data.setBatch(randomYear());
         return data;
     }
 
-    public String randomYear(){
+    public String randomYear() {
         int startYear = 1950;
         int endYear = 2024;
         return String.valueOf(random.nextInt(endYear - startYear + 1) + startYear);
 
     }
 
-    public String lastID() throws FileNotFoundException {
-        JSONObject lastStudent = readjson.readJSONFile()
-                .getJSONObject(readjson.readJSONFile().length() - 1);
-        return lastStudent.getString("id");
-    }
-
-    public String randomName(){
+    public String randomName() {
         Faker faker = new Faker();
         return faker.name().firstName();
     }
 
-    public String[] randomSkill(){
+    public String[] randomSkill() {
         List<String> skills = new ArrayList<>();
         skills.add("Driving");
         skills.add("Cooking");

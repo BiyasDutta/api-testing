@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.otg/testng-1.0.dtd">
+<suite name="Suite" verbose="2" annotations="JDK" thread-count="1">
+    <parameter name="userID" value="24"/>
+
+    <test name="GetAllRequest">
+        <classes>
+            <class name="runner.requests.GetAllRunner"/>
+        </classes>
+    </test>
+
+    <test name="PostRequest">
+        <classes>
+            <class name="runner.requests.PostRunner"/>
+        </classes>
+    </test>
+
+    <test name="GetAllRequestAfterPost">
+        <classes>
+            <class name="runner.requests.GetAllRunner"/>
+        </classes>
+    </test>
+
+    <test name="PutRequest">
+        <classes>
+            <class name="runner.requests.PutRunner"/>
+        </classes>
+    </test>
+
+    <test name="GetRequestAfterUpdate">
+        <classes>
+            <class name="runner.requests.GetRunner"/>
+        </classes>
+    </test>
+
+    <test name="DeleteRequest">
+        <classes>
+            <class name="runner.requests.DeleteRunner"/>
+        </classes>
+    </test>
+
+    <test name="GetAllRequestAfterDelete">
+        <classes>
+            <class name="runner.requests.GetAllRunner"/>
+        </classes>
+    </test>
+
+</suite>

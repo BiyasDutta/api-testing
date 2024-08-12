@@ -1,34 +1,33 @@
 package HTTPRequests;
 
+import common.Config;
 import io.restassured.response.Response;
-import org.testng.annotations.Test;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class GetRequest {
 
-    @Test(priority = 1)
-    void getAllUsers() {
+    public void getAllUsers() {
         given()
 
-                .when().get("http://localhost:3000/students")
+                .when().get("http://localhost:8080/api/students")
 
                 .then().statusCode(200).log().body();
 
         System.out.println("All users found");
     }
 
-    @Test(priority = 2)
-    void getSpecificUser() {
+    public void getSpecificUser() {
         Response response = given()
 
-                .when().get("http://localhost:3000/students/2");
+                .when().get("http://localhost:8080/api/students/" + Config.getID());
 
         response.then().statusCode(200).log().body();
 
-        response.then().assertThat().body("id", equalTo("2"));
+        response.then().assertThat().body("id", equalTo(Config.getID()));
 
-        System.out.println("Second user found");
+        System.out.println("Created user found");
 
     }
 

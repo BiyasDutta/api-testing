@@ -1,25 +1,21 @@
 package HTTPRequests;
 
-import Common.SetData;
-import org.testng.annotations.Test;
-
-import java.io.FileNotFoundException;
+import common.Config;
+import common.SetData;
 
 import static io.restassured.RestAssured.given;
 
 public class DeleteRequest {
 
     private static SetData setData;
-    String lastId;
 
-    DeleteRequest(){
+    public DeleteRequest() {
         setData = new SetData();
     }
 
-    @Test
-    void deleteUser() throws FileNotFoundException {
-        given().when().delete("http://localhost:3000/students/" + setData.lastID())
-                .then().statusCode(200);
+    public void deleteUser() {
+        given().when().delete("http://localhost:8080/api/students/" + Config.getID())
+                .then().statusCode(204);
         System.out.print("Deleted");
     }
 }
