@@ -14,8 +14,11 @@ public class DeleteRequest {
     }
 
     public void deleteUser() {
-        given().when().delete("http://localhost:8081/api/students/" + Config.getID())
+        given().
+
+                when().delete("http://localhost:8081/api/students/" + Config.getID())
+
                 .then().statusCode(204);
-        System.out.print("Deleted");
+
     }
 }

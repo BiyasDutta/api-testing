@@ -3,6 +3,7 @@ package HTTPRequests;
 import common.Config;
 import common.POJO;
 import common.SetData;
+import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
@@ -15,21 +16,20 @@ public class PutRequest {
         data = new POJO();
     }
 
-    public void updateUser() {
-        given().contentType("application/json").body(createData())
+    public Response updateUser() {
+        Response response = given().contentType("application/json").body(createData())
 
-                .when().put("http://localhost:8081/api/students/" + Config.getID())
+                .when().put("http://localhost:8081/api/students/" + Config.getID());
 
-                .then().statusCode(201).log().all();
-        System.out.println("Updated");
+                response.then().statusCode(201);
 
+    return response;
     }
 
     POJO createData() {
         data.setName(setData.randomName());
         data.setSkill(setData.randomSkill());
         data.setBatch(setData.randomYear());
-        System.out.println(data);
         return data;
     }
 

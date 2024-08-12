@@ -9,17 +9,17 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class GetRequest {
 
-    public void getAllUsers() {
-        given()
+    public Response getAllUsers() {
+        Response response = given()
 
-                .when().get("http://localhost:8081/api/students")
+                .when().get("http://localhost:8081/api/students");
 
-                .then().statusCode(200).log().body();
+        response.then().statusCode(200);
 
-        System.out.println("All users found");
+        return response;
     }
 
-    public void getSpecificUser() {
+    public Response getSpecificUser() {
         Response response = given()
 
                 .when().get("http://localhost:8081/api/students/" + Config.getID());
@@ -28,7 +28,7 @@ public class GetRequest {
 
         response.then().assertThat().body("id", equalTo(Config.getID()));
 
-        System.out.println("Created user found");
+        return response;
 
     }
 

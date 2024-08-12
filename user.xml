@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.otg/testng-1.0.dtd">
 <suite name="Suite" verbose="2" annotations="JDK" thread-count="1">
 
-    <parameter name="userID" value="${userID}"/>
+    <parameter name="userID" value="15"/>
 
     <test name="GetAllRequest">
         <classes>
@@ -16,9 +16,9 @@
         </classes>
     </test>
 
-    <test name="GetAllRequestAfterPost">
+    <test name="GetCreatedResponseAfterPost">
         <classes>
-            <class name="runner.requests.GetAllRunner"/>
+            <class name="runner.requests.GetRunner"/>
         </classes>
     </test>
 
