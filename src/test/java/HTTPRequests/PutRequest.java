@@ -18,7 +18,7 @@ public class PutRequest {
     public void updateUser() {
         given().contentType("application/json").body(createData())
 
-                .when().put("http://localhost:8080/api/students/" + Config.getID())
+                .when().put("http://localhost:8081/api/students/" + Config.getID())
 
                 .then().statusCode(201).log().all();
         System.out.println("Updated");

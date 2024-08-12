@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.otg/testng-1.0.dtd">
 <suite name="Suite" verbose="2" annotations="JDK" thread-count="1">
-    <parameter name="userID" value="24"/>
+
+    <parameter name="userID" value="34"/>
 
     <test name="GetAllRequest">
         <classes>
