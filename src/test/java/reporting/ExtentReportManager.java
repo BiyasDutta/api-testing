@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class ExtentReportManager {
     private static Random random = new Random();
-    private static String DEFAULT_REPORT_LOCATION = "/Users/biyas/Documents/Code/Java/RestAssuredDemo/reports/html/apiTesting_"
+    private static String DEFAULT_REPORT_LOCATION = "reports/html/apiTesting_"
             +random.nextInt(10000)+".html";
     protected static ExtentReports extentReports;
 
