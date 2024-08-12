@@ -2,7 +2,6 @@ package HTTPRequests;
 
 import common.Config;
 import io.restassured.response.Response;
-import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -29,7 +28,6 @@ public class GetRequest {
         response.then().assertThat().body("id", equalTo(Config.getID()));
 
         return response;
-
     }
 
 }

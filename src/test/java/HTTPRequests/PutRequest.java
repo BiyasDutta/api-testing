@@ -21,9 +21,9 @@ public class PutRequest {
 
                 .when().put("http://localhost:8081/api/students/" + Config.getID());
 
-                response.then().statusCode(201);
+        response.then().statusCode(201);
 
-    return response;
+        return response;
     }
 
     POJO createData() {

@@ -1,9 +1,9 @@
 package runner;
 
-import com.aventstack.extentreports.ExtentTest;
 import common.Config;
-import org.testng.annotations.*;
-import reporting.ExtentManager;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import reporting.ExtentReportManager;
 
 public class BaseRunner {
@@ -17,7 +17,7 @@ public class BaseRunner {
     }
 
 
-    @AfterClass
+    @AfterSuite
     public void tearDownClass() {
         ExtentReportManager.getReporter().flush();
     }
