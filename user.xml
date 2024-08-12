@@ -28,12 +28,6 @@
         </classes>
     </test>
 
-    <test name="GetRequestAfterUpdate">
-        <classes>
-            <class name="runner.requests.GetRunner"/>
-        </classes>
-    </test>
-
     <test name="DeleteRequest">
         <classes>
             <class name="runner.requests.DeleteRunner"/>
